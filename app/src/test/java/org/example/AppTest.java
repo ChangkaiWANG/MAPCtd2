@@ -11,4 +11,10 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+
+    @Test public void testCard(){
+      Card card = new Card(Card.CardEnum.ACE_OF_CLUBS);
+      assertEquals(Card.Suit.CLUBS, card.getSuit());
+      assertEquals(Card.Rank.ACE, card.getRank());
+    }
 }
